@@ -34,6 +34,10 @@ export async function getServerConfig(): Promise<ServerConfig> {
   }
 }
 
+export async function saveServerConfig(config: ServerConfig): Promise<void> {
+  await AsyncStorage.setItem("server", JSON.stringify(config));
+}
+
 export async function saveOperatorCode(opecod: string): Promise<void> {
   const obj = { opecod };
   await AsyncStorage.mergeItem("dati", JSON.stringify(obj));

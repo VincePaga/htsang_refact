@@ -1,11 +1,11 @@
 import { useCallback, useEffect, useState } from "react";
-import { loginRequest, resetPasswordRequest } from "../services/api/authApi";
-import { fetchClientLogo } from "../services/api/logoService";
+import { loginRequest, resetPasswordRequest } from "../services/api/htAuthApi";
+import { fetchClientLogo } from "../services/api/htLogoService";
 import {
   clearAuthData,
   getServerConfig,
   saveOperatorCode,
-} from "../services/storage/authStorage";
+} from "../services/storage/htAuthStorage";
 
 type UseLoginParams = {
   navigation: any;
@@ -113,7 +113,7 @@ export function useLogin({ navigation }: UseLoginParams) {
 
       if (json.result === "ok") {
         setTitoloMessaggio("INFORMAZIONE");
-        setMessaggio("La password è stata resettata. Adesso è possibile eseguire il login");
+        setMessaggio("La password Ã¨ stata resettata. Adesso Ã¨ possibile eseguire il login");
         setModalVisible(true);
         setModalResetVisible(false);
       } else {

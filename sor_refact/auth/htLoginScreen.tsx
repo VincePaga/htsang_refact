@@ -1,11 +1,11 @@
 import React from "react";
 import { View } from "react-native";
-import { Intestazione } from "../Intestazione";
+import { Intestazione } from "../components/Intestazione";
 import LoginForm from "../components/Login/forms/LoginForm";
 import LoginBranding from "../components/Login/layout/LoginBranding";
 import MessageModal from "../components/Login/modals/MessageModal";
 import ResetPasswordModal from "../components/Login/modals/ResetPasswordModal";
-import { useLogin } from "../hooks/useLogin";
+import { useLogin } from "../hooks/htUseLogin";
 import { styles } from "../styles/loginStyles";
 
 type LoginScreenProps = {

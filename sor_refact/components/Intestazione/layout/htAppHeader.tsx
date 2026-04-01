@@ -1,8 +1,8 @@
 import React from "react";
 import { View } from "react-native";
-import HeaderLeft from "./HeaderLeft";
-import HeaderLogo from "./HeaderLogo";
-import HeaderRight from "./HeaderRight";
+import HeaderLeft from "./htHeaderLeft";
+import HeaderLogo from "./htHeaderLogo";
+import HeaderRight from "./htHeaderRight";
 import { headerStyles } from "../../../styles/intestazioneStyles";
 
 type AppHeaderProps = {
