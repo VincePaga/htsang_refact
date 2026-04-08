@@ -1,9 +1,9 @@
 import React from "react";
-import AppHeader from "./Intestazione/layout/htAppHeader";
+import AppHeader from "../components/Intestazione/layout/htAppHeader";
 
 type IntestazioneProps = {
   isHome?: boolean;
-  IsSettings?: boolean;
+  isSettings?: boolean;
   isLogin?: boolean;
   showDirectListButton?: boolean;
   navigation: any;
@@ -12,7 +12,7 @@ type IntestazioneProps = {
 
 export function Intestazione({
   isHome,
-  IsSettings,
+  isSettings,
   isLogin,
   showDirectListButton,
   navigation,
@@ -21,7 +21,7 @@ export function Intestazione({
   return (
     <AppHeader
       isHome={isHome}
-      isSettings={IsSettings}
+      isSettings={isSettings}
       isLogin={isLogin}
       showDirectListButton={showDirectListButton}
       navigation={navigation}

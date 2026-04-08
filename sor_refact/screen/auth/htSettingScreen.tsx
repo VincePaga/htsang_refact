@@ -1,9 +1,9 @@
 import React from "react";
 import { View, Text, TouchableHighlight, TextInput } from "react-native";
-import { Intestazione } from ".././components/Intestazione";
-import MessageModal from "../components/Login/modals/MessageModal";
-import { useSetting } from "../hooks/htUseSetting";
-import { styles } from "../styles/settingStyles";
+import { Intestazione } from "../Intestazione";
+import MessageModal from "../../components/Login/modals/MessageModal";
+import { useSetting } from "../../hooks/htUseSetting";
+import { styles } from "../../styles/settingStyles";
 
 type SettingScreenProps = {
   navigation: any;
@@ -33,11 +33,11 @@ export default function SettingScreen({
   };
 
   return (
-    <View style={{ flex: 1, backgroundColor: "white" }}>
+    <View style={styles.container}>
       <Intestazione
         isHome={false}
         navigation={navigation}
-        IsSettings={true}
+        isSettings={true}
       />
 
       <MessageModal
@@ -52,14 +52,7 @@ export default function SettingScreen({
           Parametri Server
         </Text>
 
-        <View
-          style={{
-            justifyContent: "flex-start",
-            alignItems: "center",
-            height: 400,
-            width: 400,
-          }}
-        >
+        <View style={styles.formWrapper}>
           <View style={styles.inputView}>
             <TextInput
               style={styles.inputText}
@@ -92,7 +85,7 @@ export default function SettingScreen({
 
           <View style={{ justifyContent: "space-between", flexDirection: "row" }}>
             <TouchableHighlight
-              style={styles.Btn}
+              style={styles.btn}
               underlayColor="#36a4eb"
               onPress={handleSave}
             >
@@ -102,7 +95,7 @@ export default function SettingScreen({
             <View style={{ width: 50 }} />
 
             <TouchableHighlight
-              style={styles.Btn}
+              style={styles.btn}
               underlayColor="#36a4eb"
               onPress={() => navigation.goBack()}
             >

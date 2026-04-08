@@ -1,12 +1,12 @@
 import React from "react";
 import { View } from "react-native";
-import { Intestazione } from "../components/Intestazione";
-import LoginForm from "../components/Login/forms/LoginForm";
-import LoginBranding from "../components/Login/layout/LoginBranding";
-import MessageModal from "../components/Login/modals/MessageModal";
-import ResetPasswordModal from "../components/Login/modals/ResetPasswordModal";
-import { useLogin } from "../hooks/htUseLogin";
-import { styles } from "../styles/loginStyles";
+import { Intestazione } from "../Intestazione";
+import LoginForm from "../../components/Login/forms/LoginForm";
+import LoginBranding from "../../components/Login/layout/LoginBranding";
+import MessageModal from "../../components/Login/modals/MessageModal";
+import ResetPasswordModal from "../../components/Login/modals/ResetPasswordModal";
+import { useLogin } from "../../hooks/htUseLogin";
+import { styles } from "../../styles/loginStyles";
 
 type LoginScreenProps = {
   navigation: any;
@@ -44,7 +44,7 @@ export default function LoginScreen({ navigation }: LoginScreenProps) {
       <Intestazione
         isHome={false}
         navigation={navigation}
-        IsSettings={false}
+        isSettings={false}
         isLogin={true}
         aggiorna={loadServerParams}
       />
@@ -77,7 +77,7 @@ export default function LoginScreen({ navigation }: LoginScreenProps) {
         <View style={styles.columnWrapper}>
           <LoginBranding
             logocliente={logocliente}
-            onLogoError={() => setLogocliente("data:image/png;base64,")}
+            onLogoError={() => setLogocliente("")}
           />
 
           <LoginForm

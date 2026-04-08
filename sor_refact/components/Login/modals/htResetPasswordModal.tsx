@@ -1,8 +1,8 @@
 import React from "react";
 import { Modal, View } from "react-native";
 import { styles } from "../../../styles/loginStyles";
-import MessageModal from "./MessageModal";
-import ResetPasswordForm from "../forms/ResetPasswordForm";
+import MessageModal from "./htMessageModal";
+import ResetPasswordForm from "../forms/htResetPasswordForm";
 
 type ResetPasswordModalProps = {
   visible: boolean;

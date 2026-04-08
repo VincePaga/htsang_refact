@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Image } from "react-native";
-import HeaderIconButton from "../ui/HeaderIconButton";
+import HeaderIconButton from "../ui/htHeaderIconButton";
 import { headerStyles } from "../../../styles/intestazioneStyles";
 
 type HeaderRightProps = {

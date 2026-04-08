@@ -8,10 +8,12 @@ export async function fetchClientLogo(
   try {
     const indirizzo = buildBaseUrl(ip, porta, url);
     const response = await fetch(`${indirizzo}/logo_cliente`);
+    if (!response.ok) return "";
     const json = await response.json();
+    if (!json.tipo || !json.valore) return "";
 
     return `data:image/${json.tipo};base64,${json.valore}`;
   } catch {
-    return "data:image/png;base64,";
+    return "";
   }
 }

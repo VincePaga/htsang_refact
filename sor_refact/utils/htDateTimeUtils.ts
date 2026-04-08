@@ -11,6 +11,8 @@ type DateInputKind = '' | 's';
   - convertire una data tra diversi formati
 */
 
+export function _formato_data(data: string | Date, formatoin: DateInputFormat, formatoout: 'dd/mm/yyyy' | 'yyyy-mm-dd', tipo?: DateInputKind): string;
+export function _formato_data(data: string | Date, formatoin?: DateInputFormat, formatoout?: '', tipo?: DateInputKind): Date;
 export function _formato_data(
   data: string | Date,
   formatoin: DateInputFormat = '',

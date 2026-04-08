@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { commonStyles } from "./commonStyles";
 
 export const styles = StyleSheet.create({
   container: {
@@ -25,40 +26,17 @@ export const styles = StyleSheet.create({
     marginTop: 150,
   },
 
-  inputView: {
-    width: 300,
-    backgroundColor: "white",
-    borderColor: "#003f5c",
-    borderWidth: 1,
-    borderRadius: 25,
-    height: 50,
-    marginBottom: 20,
-    justifyContent: "center",
-    padding: 20,
-  },
+  inputView: commonStyles.inputView,
+  inputText: commonStyles.inputText,
+  loginBtn: commonStyles.actionBtn,
+  loginText: commonStyles.actionBtnText,
+  ModalView: commonStyles.modalOverlay,
+  popup: commonStyles.popup,
 
-  inputText: {
-    height: 50,
+  resetPopup: {
+    ...commonStyles.popup,
+    height: 450,
     width: 400,
-    color: "#003f5c",
-    fontSize: 20,
-  },
-
-  loginBtn: {
-    backgroundColor: "#2981ba",
-    borderColor: "white",
-    borderWidth: 1,
-    borderRadius: 25,
-    height: 50,
-    width: 100,
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 20,
-    marginBottom: 10,
-  },
-
-  loginText: {
-    color: "white",
   },
 
   centeredView: {
@@ -66,30 +44,6 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 0,
     backgroundColor: "white",
-  },
-
-  ModalView: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 0,
-    backgroundColor: "#00000077",
-  },
-
-  popup: {
-    margin: 20,
-    backgroundColor: "white",
-    borderRadius: 20,
-    padding: 35,
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
   },
 
   messageContainer: {
@@ -134,6 +88,10 @@ export const styles = StyleSheet.create({
     textAlign: "center",
     width: 400,
     color: "#2981ba",
+  },
+
+  loadingPlaceholder: {
+    height: 36,
   },
 
   resetButtonsRow: {

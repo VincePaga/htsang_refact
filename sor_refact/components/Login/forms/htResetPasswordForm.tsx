@@ -32,7 +32,7 @@ export default function ResetPasswordForm({
   onClose,
 }: ResetPasswordFormProps) {
   return (
-    <View style={[styles.popup, { height: 450, width: 400 }]}>
+    <View style={styles.resetPopup}>
       <View style={styles.resetContainer}>
         <View style={styles.resetTitleWrapper}>
           <View>
@@ -47,6 +47,7 @@ export default function ResetPasswordForm({
             placeholder="Password..."
             placeholderTextColor="#003f5c"
             value={resetPwd}
+            editable={!loading}
             onChangeText={onChangeResetPwd}
           />
         </View>
@@ -58,6 +59,7 @@ export default function ResetPasswordForm({
             placeholder="Ripeti Password..."
             placeholderTextColor="#003f5c"
             value={resetPwd2}
+            editable={!loading}
             onChangeText={onChangeResetPwd2}
           />
         </View>
@@ -69,6 +71,7 @@ export default function ResetPasswordForm({
             placeholder="PINCODE..."
             placeholderTextColor="#003f5c"
             value={resetPincode}
+            editable={!loading}
             onChangeText={onChangeResetPincode}
           />
         </View>
@@ -78,7 +81,7 @@ export default function ResetPasswordForm({
             <ActivityIndicator size="large" color="#0000ff" />
           </View>
         ) : (
-          <View style={{ height: 36 }} />
+          <View style={styles.loadingPlaceholder} />
         )}
 
         <View style={styles.resetButtonsRow}>

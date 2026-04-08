@@ -33,6 +33,7 @@ export default function LoginForm({
           placeholder="Email..."
           placeholderTextColor="#003f5c"
           value={email}
+          editable={!loading}
           onChangeText={onChangeEmail}
         />
       </View>
@@ -44,16 +45,15 @@ export default function LoginForm({
           placeholder="Password..."
           placeholderTextColor="#003f5c"
           value={password}
+          editable={!loading}
           onChangeText={onChangePassword}
         />
       </View>
 
-      {loading ? (
+      {loading && (
         <View style={styles.centeredView}>
           <ActivityIndicator size="large" color="#0000ff" />
         </View>
-      ) : (
-        <View />
       )}
 
       <TouchableHighlight

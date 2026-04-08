@@ -10,14 +10,14 @@ export function useSetting() {
     const [url, setUrl] = useState("");
     const [modalVisible, setModalVisible] = useState(false);
     
-    const loadServerConfig = useCallback(async () => {
-        const server = await getServerConfig();
-        setIp(server.ip);
-        setPorta(server.porta);
-        setUrl(server.url);
-    }, [])
+  const loadServerConfig = useCallback(async () => {
+    const server = await getServerConfig();
+    setIp(server.ip);
+    setPorta(server.porta);
+    setUrl(server.url);
+  }, []);
 
-     const handleSave = useCallback(async () => {
+  const handleSave = useCallback(async () => {
     await saveServerConfig({ ip, porta, url });
     setModalVisible(true);
   }, [ip, porta, url]);

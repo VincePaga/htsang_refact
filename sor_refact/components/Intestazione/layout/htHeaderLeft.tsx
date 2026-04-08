@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Image } from "react-native";
-import HeaderIconButton from "../ui/HeaderIconButton";
-import HeaderTextButton from "../ui/HeaderTextButton";
+import HeaderIconButton from "../ui/htHeaderIconButton";
+import HeaderTextButton from "../ui/htHeaderTextButton";
 import { headerStyles } from "../../../styles/intestazioneStyles";
 
 type HeaderLeftProps = {
